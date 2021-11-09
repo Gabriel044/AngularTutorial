@@ -1,0 +1,7 @@
+<h1>Registra un nuevo café</h1>
+<form [formGroup]="coffeeForm" (ngSubmit)="onFormSubmit()">
+  <input type="text" placeholder="name" formControlName="name" />
+  <input type="number" placeholder="price" formControlName="cost" />
+  Available <input type="checkbox" formControlName="available" />
+  <button type="submit">Add</button>
+</form>

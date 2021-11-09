@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'AngularCrashCourse';
+  constructor(private router: Router) {}
+
+  navigateTo(link: string) {
+    this.router.navigateByUrl(link);
+  }
 }

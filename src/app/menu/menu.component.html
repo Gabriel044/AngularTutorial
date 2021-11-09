@@ -1,0 +1,7 @@
+<p>¡Nuestro menú de café!</p>
+<div class="menu" *ngFor="let coffee of menu">
+  <p class="field">{{ coffee.name }}</p>
+  <p class="field">{{ coffee.cost }}</p>
+  <p class="field" *ngIf="coffee.available; else elseBlock">Disponible</p>
+  <ng-template class="field" #elseBlock>Agotado</ng-template>
+</div>
